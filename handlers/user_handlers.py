@@ -42,7 +42,7 @@ async def start_order(message: types.Message, state: FSMContext):
 async def process_house(message: types.Message, state: FSMContext):
     await state.update_data(house=str(message.text).strip())
     await state.set_state(OrderState.entrance)
-    await message.answer("Введите номер подъезда с лева на право:")
+    await message.answer("Введите номер подъезда слева направо:")
 
 @router.message(OrderState.entrance)
 async def process_entrance(message: types.Message, state: FSMContext):

@@ -1,7 +1,7 @@
-# config.py
+import os
 
 # Токен бота
-TOKEN = "8502689911:AAFooPIXmhRd5-gxizeP1I_oizE2W0sCVfo"
+TOKEN = os.getenv("TOKEN")
 
-# Админские уведомления будут приходить сюда (для теста тот же аккаунт)
-ADMIN_CHAT_ID = 1465644234
+# Админский чат
+ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID")
